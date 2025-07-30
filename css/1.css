@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap');
 @import url("https://cdn.jsdelivr.net/npm/tailwindcss@2.0.3/dist/tailwind.min.css");
 
 .nanum-myeongjo-regular {
@@ -6,6 +6,19 @@
   font-weight: 400;
   font-style: normal;
 }
+
+.nanum-myeongjo-bold {
+  font-family: "Nanum Myeongjo", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.nanum-myeongjo-extrabold {
+  font-family: "Nanum Myeongjo", serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
 
 body {
   font-family: 'Nanum Myeongjo', sans-serif;
