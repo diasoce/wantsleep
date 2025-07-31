@@ -152,7 +152,7 @@ ul.dropdown li:hover {
   background-color: #ddd;
 }
 
-/* 이미지 중앙 정렬 및 간격 조정 */
+/* 이미지 정렬 및 간격 조정 */
 .container {
   display: flex;
   justify-content: left; 
@@ -164,6 +164,11 @@ ul.dropdown li:hover {
   display: inline-block;
 }
 /*슬라이덩*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .slider {
   width: 100%;
   overflow-x: scroll;  /* 수평 스크롤 가능 */
@@ -175,7 +180,7 @@ ul.dropdown li:hover {
 
 .slider-wrapper {
   display: flex;
-  gap: 0;  /* 이미지 간 간격을 없앰 */
+  gap: 10px;  /* 이미지 간 간격을 없앰 */
 }
 
 .slider-wrapper img {
