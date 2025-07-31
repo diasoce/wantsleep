@@ -45,8 +45,8 @@ h3 {
 p {
   font-family: 'Nanum Gothic', serif;
   font-size: regular;
-  font-weight: 400; /* 일반 글씨 */
-  color: #000000;
+  font-weight: 400;
+  color: #110f0f;
 }
 a {
   color: #1a0dab;
