@@ -193,7 +193,7 @@ ul.dropdown li:hover {
 /*나누는 선*/
     hr {
       border: 0;
-      border-top: 100px solid #000000; /* 선의 두께를 100px로 설정 */
-      width: 80%; /* 선의 길이 */
+      border-top: 10px solid #000000; /* 선의 두께를 100px로 설정 */
+      width: 50%; /* 선의 길이 */
       margin: 20px auto; /* 위아래 여백과 중앙 정렬 */
     }
