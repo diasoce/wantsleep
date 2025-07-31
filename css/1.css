@@ -180,7 +180,8 @@ ul.dropdown li:hover {
 
 .slider-wrapper {
   display: flex;
-  gap: 10px;  /* 이미지 간 간격을 없앰 */
+  width: 100%;
+  gap: 10px;
 }
 
 .slider-wrapper img {
