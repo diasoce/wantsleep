@@ -189,3 +189,11 @@ ul.dropdown li:hover {
   object-fit: cover;  /* 이미지가 비율을 유지하며 잘림 */
   scroll-snap-align: start;  /* 각 이미지가 왼쪽 정렬되도록 스냅 설정 */
 }
+
+/*나누는 선*/
+    hr {
+      border: 0;
+      border-top: 10px solid #000000; /* 선의 두께를 10px로 설정 */
+      width: 80%; /* 선의 길이 */
+      margin: 20px auto; /* 위아래 여백과 중앙 정렬 */
+    }
