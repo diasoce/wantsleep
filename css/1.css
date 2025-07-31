@@ -163,3 +163,18 @@ ul.dropdown li:hover {
   width: auto; /* 이미지 크기 조정 */
   display: inline-block;
 }
+/*슬라이덩*/
+.slider {
+  width: 100%; 
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  display: flex;
+  justify-content: center;
+}
+.slider-wrapper img {
+  width: 100%;
+  height: auto;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+}
