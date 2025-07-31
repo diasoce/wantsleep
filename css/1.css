@@ -165,16 +165,21 @@ ul.dropdown li:hover {
 }
 /*슬라이덩*/
 .slider {
-  width: 100%; 
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
+  width: 100%;
+  overflow-x: scroll;  /* 수평 스크롤 가능 */
+  scroll-snap-type: x mandatory;  /* 수동 스와이프 스냅 설정 */
+  -webkit-overflow-scrolling: touch;  /* 모바일에서 부드러운 스크롤 */
   display: flex;
   justify-content: center;
 }
+
+.slider-wrapper {
+  display: flex;
+  gap: 0;  /* 이미지 간 간격을 없앰 */
+}
+
 .slider-wrapper img {
-  width: 100%;
-  height: auto;
-  flex-shrink: 0;
-  scroll-snap-align: start;
+  width: 100vw; /* 각 이미지를 화면 너비에 맞게 */
+  object-fit: cover;  /* 이미지가 비율을 유지하며 잘림 */
+  scroll-snap-align: start;  /* 각 이미지가 왼쪽 정렬되도록 스냅 설정 */
 }
