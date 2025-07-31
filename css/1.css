@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
 @import url("https://cdn.jsdelivr.net/npm/tailwindcss@2.0.3/dist/tailwind.min.css");
 
 .nanum-myeongjo-regular {
@@ -7,18 +8,23 @@
   font-style: normal;
 }
 
-.nanum-myeongjo-bold {
-  font-family: "Nanum Myeongjo", serif;
+.nanum-gothic-regular {
+  font-family: "Nanum Gothic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.nanum-gothic-bold {
+  font-family: "Nanum Gothic", sans-serif;
   font-weight: 700;
   font-style: normal;
 }
 
-.nanum-myeongjo-extrabold {
-  font-family: "Nanum Myeongjo", serif;
+.nanum-gothic-extrabold {
+  font-family: "Nanum Gothic", sans-serif;
   font-weight: 800;
   font-style: normal;
 }
-
 
 body {
   font-family: 'Nanum Myeongjo', sans-serif;
@@ -27,21 +33,23 @@ body {
   padding: 20px;
 }
 h1 {
-  font-size: 3em;
+  font-size: 2em;
   font-weight: 800; /* 굵은 글씨 */
   color: #9a0000;
 }
 h2 {
-  font-size: 2.5em;
+  font-size: 1.5em;
   font-weight: 700; /* 굵은 글씨 */
   color: #8b1a1a;
 }
 h3 {
-  font-size: 2em;
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 1.2em;
   font-weight: 400; /* 일반 글씨 */
   color: #1a0dab;
 }
 p {
+  font-family: 'Nanum Myeongjo', serif;
   font-size: regular;
   font-weight: 400; /* 일반 글씨 */
   color: #8b1a1a;
@@ -100,7 +108,7 @@ ul li {
 }
 
 ul li:before {
-    content: '→';  /* 원하는 기호로 설정 */
+    content: '▶';  /* 원하는 기호로 설정 */
     position: absolute;
     left: -20px;
     top: 0;
