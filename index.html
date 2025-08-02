@@ -6,6 +6,25 @@
   <meta charset="utf-8">
 </head>
 <body>
+  <input type="button" value="night" id="myButton">
+  <script>
+    document.getElementById("myButton").addEventListener("click", function() {
+        alert("버튼 클릭!");
+    });
+  </script>
+  <input type="button" value="night" onclick="
+    var target = document.querySelector('body');
+    if(this.value === 'night'){
+      target.style.backgroundColor = 'black';
+      target.style.color = 'white';
+      this.value = 'day';
+    } else {
+      target.style.backgroundColor = 'white';
+      target.style.color = 'black';
+      this.value = 'night';
+    alert('배경색이 변경되었습니다.');
+    }
+  ">
   <h1><a href="index.html">여행 소개</a></h1>
   <h2><ol>
     <li><a href="1.html">첫째날</a></li>
@@ -42,6 +61,15 @@
     <li>일어과다. 이번 여행 대부분의 소통을 도맡았다.</li>
     </ul>
     </p>
+    
+    <div class="myClass">내용1</div>
+<div class="myClass">내용2</div>
+<script>
+    let items = document.getElementsByClassName("myClass");
+    for (let i = 0; i < items.length; i++) {
+        items[i].style.color = "blue";  // 모든 "myClass" 클래스를 가진 텍스트 색상 변경
+    }
+</script>
 
 </body>
 </html>
