@@ -208,6 +208,10 @@ ul.dropdown li:hover {
   -webkit-backface-visibility: hidden;
   -moz-osx-font-smoothing: grayscale;
 }
+.button span {
+  display: block;
+  margin-top: 10px;
+}
 .button:focus {
   outline: none;
 }
@@ -300,5 +304,5 @@ hr {
   margin: 20px auto; /* 위아래 여백과 중앙 정렬 */
   }
 .hr--inverted {
-  background-color: #ffffff; /* 반전된 색상 */
-}    
+  transition: background-color 0.3s ease;
+}
