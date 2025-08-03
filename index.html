@@ -20,13 +20,14 @@
   let nightMode = false;
 
   // 색 반전 함수
-  const invert = rgb => {
-    const [r, g, b] = rgb.match(/\d+/g).map(Number);
+  const invert = color => {
+    const [r, g, b] = color.match(/\d+/g).map(Number);
     return `rgb(${255 - r}, ${255 - g}, ${255 - b})`;
   };
 
   btn.addEventListener('click', () => {
     const style = getComputedStyle(btn);
+    const btnBgColor = getComputedStyle(btn).backgroundColor;
 
     // 버튼 색상 반전
     if (!inverted) {
@@ -35,12 +36,12 @@
       btn.style.backgroundColor = invert(style.backgroundColor);
       btn.style.color = invert(style.color);
       btn.classList.add('button--inverted');
-      btn.classList.add('hr--inverted');
+      hr.style.backgroundColor = invertColor(btnBgColor);
     } else {
       btn.style.backgroundColor = btn.dataset.bg;
       btn.style.color = btn.dataset.color;
       btn.classList.remove('button--inverted');
-      btn.classList.remove('hr--inverted');
+      hr.style.backgroundColor = '';
     }
     inverted = !inverted;
 
