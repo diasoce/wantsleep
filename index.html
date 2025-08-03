@@ -11,7 +11,7 @@
   data-text="night">
   <span>night</span>
   </button>
-  <p style="margin-top:50px;"></p>
+  <p style="margin-top:60px;"></p>
 <script>
   const btn = document.getElementById('myButton');
   const span = btn.querySelector('span');
@@ -46,12 +46,12 @@
     if (!nightMode) {
       target.style.backgroundColor = 'black';
       target.style.color = 'white';
-      span.textContent = 'day';
+      span.textContent = 'night';
       alert('배경색이 변경되었습니다.');
     } else {
       target.style.backgroundColor = 'white';
       target.style.color = 'black';
-      span.textContent = 'night';
+      span.textContent = 'day';
       alert('배경색이 변경되었습니다.');
     }
     nightMode = !nightMode;
