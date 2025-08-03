@@ -266,11 +266,10 @@ ul.dropdown li:hover {
   display: block;
 }
 .button--winona.button--inverted {
-  color: #7986cb;
+  background-color: #7986cb;
 }
 .button--winona.button--inverted:after {
   color: #fff;
-  background-color: #7986cb;
 }
 .button--winona::after,
 .button--winona > span {
