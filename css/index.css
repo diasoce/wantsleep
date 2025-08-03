@@ -207,6 +207,7 @@ ul.dropdown li:hover {
   z-index: 1;
   -webkit-backface-visibility: hidden;
   -moz-osx-font-smoothing: grayscale;
+  margin-right: 10px;
 }
 .button:focus {
   outline: none;
