@@ -191,17 +191,6 @@ ul.dropdown li:hover {
   scroll-snap-align: start;  /* 각 이미지가 왼쪽 정렬되도록 스냅 설정 */
 }
 
-/*나누는 선*/
-    hr {
-      border: 0;
-      border-top: 2px solid #000000;
-      width: 100%; /* 선의 길이 */
-      margin: 20px auto; /* 위아래 여백과 중앙 정렬 */
-    }
-.button--inverted + hr {
-  background-color: #ffffff; /* 반전된 색상 */
-}    
-
 /*버튼 디자인*/
 .button {
   float: left;
@@ -302,3 +291,14 @@ ul.dropdown li:hover {
   -webkit-transform: translate3d(0, -25%, 0);
   transform: translate3d(0, -25%, 0);
 }
+
+/*나누는 선*/
+hr {
+  border: 0;
+  border-top: 2px solid #000000;
+  width: 100%; /* 선의 길이 */
+  margin: 20px auto; /* 위아래 여백과 중앙 정렬 */
+  }
+.button--inverted + hr {
+  background-color: #ffffff; /* 반전된 색상 */
+}    
