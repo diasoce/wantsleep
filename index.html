@@ -6,15 +6,10 @@
   <meta charset="utf-8">
 </head>
 <body>
-    <button id="myButton" 
-          class="button button--winona button--border-thin button--round-s" 
-          if (nightMode) {
-            data-text="day"
-            <span>day</span>
-          } else {
-            data-text="night"
-            <span>night</span>
-          }>
+  <button id="myButton" 
+    class="button button--winona button--border-thin button--round-s" data-text="day"
+  data-text="night">
+  <span>night</span>
   </button>
 </div>
 
@@ -51,13 +46,15 @@
     if (!nightMode) {
       target.style.backgroundColor = 'black';
       target.style.color = 'white';
-      span.textContent = 'day'
+      span.textContent = 'day';
+      btn.dataset.text = 'day';
       nightMode = true;
       alert('배경색이 변경되었습니다.');
     } else {
       target.style.backgroundColor = 'white';
       target.style.color = 'black';
-      span.textContent = 'night'
+      span.textContent = 'night';
+      btn.dataset.text = 'night';
       nightMode = false;
       alert('배경색이 변경되었습니다.');
     }
