@@ -219,10 +219,6 @@ ul.dropdown li:hover {
 .button:focus {
   outline: none;
 }
-.button > span {
-  vertical-align: middle;
-}
-
 /* Text color adjustments (we could stick to the "inherit" but that does not work well in Safari) */
 .bg-1 .button {
   color: #37474f;

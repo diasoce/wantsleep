@@ -6,12 +6,19 @@
   <meta charset="utf-8">
 </head>
 <body>
-  <div class="box bg-1">
-    <button class="button button--winona button--border-thin button--round-s" data-text="Open Project"><span>Open Project</span>
-  <script>
+    <button id="myButton" 
+          class="button button--winona button--border-thin button--round-s" 
+          data-text="Open Project">
+    <span>Open Project</span>
+  </button>
+</div>
+
+<script>
   const btn = document.getElementById('myButton');
   let inverted = false;
+  let nightMode = false;
 
+  // 색 반전 함수
   const invert = rgb => {
     const [r, g, b] = rgb.match(/\d+/g).map(Number);
     return `rgb(${255 - r}, ${255 - g}, ${255 - b})`;
@@ -20,6 +27,7 @@
   btn.addEventListener('click', () => {
     const style = getComputedStyle(btn);
 
+    // 버튼 색상 반전
     if (!inverted) {
       btn.dataset.bg = style.backgroundColor;
       btn.dataset.color = style.color;
@@ -32,23 +40,22 @@
       btn.classList.remove('button--inverted');
     }
     inverted = !inverted;
-  });
-    </script>
-  <input type="button--winona" value="night" onclick="
-    var target = document.querySelector('body');
-    if(this.value === 'night'){
+
+    // 페이지 배경 색 반전
+    const target = document.body;
+    if (!nightMode) {
       target.style.backgroundColor = 'black';
       target.style.color = 'white';
-      this.value = 'day';
+      nightMode = true;
       alert('배경색이 변경되었습니다.');
     } else {
       target.style.backgroundColor = 'white';
       target.style.color = 'black';
-      this.value = 'night';
+      nightMode = false;
       alert('배경색이 변경되었습니다.');
     }
-  ">
-  </button></div>
+  });
+</script>
   <script>
     let items = document.getElementsByClassName("myClass");
     for (let i = 0; i < items.length; i++) {
