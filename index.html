@@ -11,10 +11,10 @@
   data-text="night">
   <span>night</span>
   </button>
-</div>
-
+  <p style="margin-top:45px;"></p>
 <script>
   const btn = document.getElementById('myButton');
+  const span = btn.querySelector('span');
   let inverted = false;
   let nightMode = false;
 
@@ -47,17 +47,16 @@
       target.style.backgroundColor = 'black';
       target.style.color = 'white';
       span.textContent = 'day';
-      btn.dataset.text = 'day';
       nightMode = true;
       alert('배경색이 변경되었습니다.');
     } else {
       target.style.backgroundColor = 'white';
       target.style.color = 'black';
       span.textContent = 'night';
-      btn.dataset.text = 'night';
       nightMode = false;
       alert('배경색이 변경되었습니다.');
     }
+    nightMode = !nightMode;
   });
 </script>
   <script>
