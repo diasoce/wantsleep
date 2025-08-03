@@ -8,8 +8,8 @@
 <body>
     <button id="myButton" 
           class="button button--winona button--border-thin button--round-s" 
-          data-text="Open Project">
-    <span>Open Project</span>
+          data-text="night">
+    <span>night</span>
   </button>
 </div>
 
@@ -46,11 +46,13 @@
     if (!nightMode) {
       target.style.backgroundColor = 'black';
       target.style.color = 'white';
+      span.textContent = 'day'
       nightMode = true;
       alert('배경색이 변경되었습니다.');
     } else {
       target.style.backgroundColor = 'white';
       target.style.color = 'black';
+      span.textContent = 'night';
       nightMode = false;
       alert('배경색이 변경되었습니다.');
     }
