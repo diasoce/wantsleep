@@ -280,7 +280,7 @@ ul.dropdown li:hover {
 }
 .button--winona:hover {
   border-color: #8a93c8;
-  vertical-align: middle;
+  align-items: center;
 }
 .button--winona.button--inverted:hover {
   border-color: #21333C;
