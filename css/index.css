@@ -207,8 +207,7 @@ ul.dropdown li:hover {
   float: left;
   min-width: 150px;
   max-width: 250px;
-  display: flex;
-  align-items: center;
+  display: block;
   margin: 1em;
   padding: 1em 2em;
   border: none;
@@ -217,6 +216,7 @@ ul.dropdown li:hover {
   vertical-align: middle;
   position: relative;
   z-index: 1;
+  -webkit-backface-visibility: hidden;
   -moz-osx-font-smoothing: grayscale;
 }
 .button:focus {
@@ -267,7 +267,7 @@ ul.dropdown li:hover {
 }
 .button--winona > span {
   display: block;
-  background-color: #7568d6;
+  background-color: #4734db;
 }
 .button--winona.button--inverted {
   background-color: #4e5fb7;
