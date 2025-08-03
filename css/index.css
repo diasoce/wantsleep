@@ -198,6 +198,9 @@ ul.dropdown li:hover {
       width: 100%; /* 선의 길이 */
       margin: 20px auto; /* 위아래 여백과 중앙 정렬 */
     }
+.button--inverted + hr {
+  background-color: #ffffff; /* 반전된 색상 */
+}    
 
 /*버튼 디자인*/
 .button {
@@ -258,7 +261,7 @@ ul.dropdown li:hover {
   top: 0;
   left: 0;
   opacity: 0;
-  color: #3f51b5;
+  color: #7982b2;
   -webkit-transform: translate3d(0, 25%, 0);
   transform: translate3d(0, 25%, 0);
 }
@@ -272,7 +275,9 @@ ul.dropdown li:hover {
 .button--winona.button--inverted:after {
   color: #5d56af;
 }
-.button--winona::after,
+.button--winona::after {
+  color:#6151da
+}
 .button--winona > span {
   padding: 1em 2em;
   -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
@@ -281,7 +286,7 @@ ul.dropdown li:hover {
   transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
 }
 .button--winona:hover {
-  border-color: #3f51b5;
+  border-color: #8a93c8;
 }
 .button--winona.button--inverted:hover {
   border-color: #21333C;
