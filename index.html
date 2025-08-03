@@ -7,8 +7,9 @@
 </head>
 <body>
   <button id="myButton" 
-    class="button button--winona button--border-thin button--round-s">
-  <span>night</span>
+    class="button button--winona button--border-thin button--round-s"
+    data-text="night">
+    <span>night</span>
   </button>
   <p style="margin-top:60px;"></p>
 <script>
@@ -45,11 +46,13 @@
     if (!nightMode) {
       target.style.backgroundColor = 'black';
       target.style.color = 'white';
+      btn.dataset.text = "day";
       span.textContent = 'day';
       alert('배경색이 변경되었습니다.');
     } else {
       target.style.backgroundColor = 'white';
       target.style.color = 'black';
+      btn.dataset.text = "night";
       span.textContent = 'night';
       alert('배경색이 변경되었습니다.');
     }
