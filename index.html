@@ -6,6 +6,9 @@
   <meta charset="utf-8">
 </head>
 <body>
+  <div class="box bg-1">
+    <button class="button button--winona button--border-thin button--round-s" data-text="Open Project"><span>Open Project</span></button>
+  </div>
   <script>
   const btn = document.getElementById('myButton');
   let inverted = false;
@@ -29,7 +32,6 @@
       btn.style.color = btn.dataset.color;
       btn.classList.remove('button--inverted');
     }
-
     inverted = !inverted;
   });
     </script>
