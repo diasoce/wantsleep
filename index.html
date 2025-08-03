@@ -15,7 +15,6 @@
 <script>
   const btn = document.getElementById('myButton');
   const span = btn.querySelector('span');
-  const hr = document.getElementById('colorLine');
   let inverted = false;
   let nightMode = false;
 
@@ -27,7 +26,6 @@
 
   btn.addEventListener('click', () => {
     const style = getComputedStyle(btn);
-    const btnBgColor = getComputedStyle(btn).backgroundColor;
 
     // 버튼 색상 반전
     if (!inverted) {
@@ -36,14 +34,13 @@
       btn.style.backgroundColor = invert(style.backgroundColor);
       btn.style.color = invert(style.color);
       btn.classList.add('button--inverted');
-      hr.classList.add('hr--inverted');
+      btn.classList.add('hr--inverted');
     } else {
       btn.style.backgroundColor = btn.dataset.bg;
       btn.style.color = btn.dataset.color;
       btn.classList.remove('button--inverted');
-      hr.classList.remove('hr--inverted');
-
-      }
+      btn.classList.remove('hr--inverted');
+    }
     inverted = !inverted;
 
     // 페이지 배경 색 반전
