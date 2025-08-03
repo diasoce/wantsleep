@@ -208,12 +208,11 @@ ul.dropdown li:hover {
   -webkit-backface-visibility: hidden;
   -moz-osx-font-smoothing: grayscale;
 }
-.button span {
-  display: block;
-  margin-top: 10px;
-}
 .button:focus {
   outline: none;
+}
+.button > span {
+  vertical-align: middle;
 }
 /* Text color adjustments (we could stick to the "inherit" but that does not work well in Safari) */
 .bg-1 .button {
@@ -268,9 +267,7 @@ ul.dropdown li:hover {
 .button--winona.button--inverted:after {
   color: #5d56af;
 }
-.button--winona::after {
-  color:#6151da
-}
+.button--winona::after,
 .button--winona > span {
   padding: 1em 2em;
   -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
