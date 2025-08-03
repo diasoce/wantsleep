@@ -31,13 +31,18 @@
 
     // 버튼 색상 반전
     if (!inverted) {
-      btn.style.backgroundColor = invertColor(btnBgColor);
-      btn.style.color = invertColor(getComputedStyle(btn).color);
-      hr.style.backgroundColor = invertColor(btnBgColor);
+      btn.dataset.bg = style.backgroundColor;
+      btn.dataset.color = style.color;
+      btn.style.backgroundColor = invert(style.backgroundColor);
+      btn.style.color = invert(style.color);
+      btn.classList.add('button--inverted');
+      hr.classList.add('hr--inverted');
     } else {
-      btn.style.backgroundColor = '';
-      btn.style.color = '';
-      hr.style.backgroundColor = '';
+      btn.style.backgroundColor = btn.dataset.bg;
+      btn.style.color = btn.dataset.color;
+      btn.classList.remove('button--inverted');
+      hr.classList.remove('hr--inverted');
+
       }
     inverted = !inverted;
 
