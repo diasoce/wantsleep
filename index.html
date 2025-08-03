@@ -34,10 +34,12 @@
       btn.style.backgroundColor = invert(style.backgroundColor);
       btn.style.color = invert(style.color);
       btn.classList.add('button--inverted');
+      btn.classList.add('hr--inverted');
     } else {
       btn.style.backgroundColor = btn.dataset.bg;
       btn.style.color = btn.dataset.color;
       btn.classList.remove('button--inverted');
+      btn.classList.remove('hr--inverted');
     }
     inverted = !inverted;
 

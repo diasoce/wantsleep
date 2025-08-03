@@ -299,6 +299,6 @@ hr {
   width: 100%; /* 선의 길이 */
   margin: 20px auto; /* 위아래 여백과 중앙 정렬 */
   }
-.button--inverted + hr {
+.hr--inverted {
   background-color: #ffffff; /* 반전된 색상 */
 }    
