@@ -281,7 +281,6 @@ ul.dropdown li:hover {
 }
 .button--winona:hover {
   border-color: #3f51b5;
-  background-color: rgba(63, 81, 181, 0.1);
 }
 .button--winona.button--inverted:hover {
   border-color: #21333C;
