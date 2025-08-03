@@ -211,9 +211,9 @@ ul.dropdown li:hover {
   margin: 1em;
   padding: 1em 2em;
   border: none;
-  text-align: center;
   background: none;
   color: inherit;
+  vertical-align: middle;
   position: relative;
   z-index: 1;
   -moz-osx-font-smoothing: grayscale;
