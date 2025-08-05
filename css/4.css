@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
 @import url("https://cdn.jsdelivr.net/npm/tailwindcss@2.0.3/dist/tailwind.min.css");
+
 .nanum-gothic-regular {
   font-family: "Nanum Gothic", sans-serif;
   font-weight: 400;
@@ -190,10 +191,114 @@ ul.dropdown li:hover {
   scroll-snap-align: start;  /* 각 이미지가 왼쪽 정렬되도록 스냅 설정 */
 }
 
+/*버튼 디자인*/
+.button {
+  float: left;
+  min-width: 150px;
+  max-width: 250px;
+  display: block;
+  margin: 1em;
+  padding: 1em 2em;
+  border: none;
+  background: none;
+  color: inherit;
+  vertical-align: middle;
+  position: relative;
+  z-index: 1;
+  -webkit-backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+}
+.button:focus {
+  outline: none;
+}
+.button > span {
+  vertical-align: middle;
+}
+/* Text color adjustments (we could stick to the "inherit" but that does not work well in Safari) */
+.bg-1 .button {
+  color: #37474f;
+  border-color: #37474f;
+}
+.button--size-s {
+  font-size: 14px;
+}
+/* Typography and Roundedness */
+.button--text-upper {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.button--text-thin {
+  font-weight: 300;
+}
+.button--round-s {
+  border-radius: 5px;
+}
+/* Borders */
+.button--border-thin {
+  border: 1px solid;
+}
+.button--winona {
+  overflow: hidden;
+  padding: 0;
+  -webkit-transition: border-color 0.3s, background-color 0.3s;
+  transition: border-color 0.3s, background-color 0.3s;
+  -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+  transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+}
+.button--winona::after {
+  content: attr(data-text);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  color: #7982b2;
+  -webkit-transform: translate3d(0, 25%, 0);
+  transform: translate3d(0, 25%, 0);
+}
+.button--winona > span {
+  display: block;
+  background-color: #6f59d2;
+}
+.button--winona.button--inverted {
+  background-color: #4e5fb7;
+}
+.button--winona.button--inverted:after {
+  color: #5d56af;
+}
+.button--winona::after,
+.button--winona > span {
+  padding: 1em 2em;
+  -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+  transition: transform 0.3s, opacity 0.3s;
+  -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+  transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+}
+.button--winona:hover {
+  border-color: #8a93c8;
+  align-items: center;
+}
+.button--winona.button--inverted:hover {
+  border-color: #21333C;
+  background-color: #21333C;
+}
+.button--winona:hover::after {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+.button--winona:hover > span {
+  opacity: 0;
+  -webkit-transform: translate3d(0, -25%, 0);
+  transform: translate3d(0, -25%, 0);
+}
+
 /*나누는 선*/
-    hr {
-      border: 0;
-      border-top: 2px solid #000000;
-      width: 100%; /* 선의 길이 */
-      margin: 20px auto; /* 위아래 여백과 중앙 정렬 */
-    }
+hr {
+  border: 0;
+  border-top: 2px solid #000000;
+  width: 100%; /* 선의 길이 */
+  margin: 20px auto; /* 위아래 여백과 중앙 정렬 */
+  transition: background-color 0.3s ease;
+}

@@ -1,14 +1,74 @@
 <!doctype html>
 <html>
 <head>
-  <link rel="stylesheet" href="css/3.css">
-  <title>6/20 ~ 6/23 - 셋째날</title>
+  <link rel="stylesheet" href="css/index.css">
+  <title>6/20 ~ 6/23 - Welcome</title>
   <meta charset="utf-8">
 </head>
 <body>
-  <h1><a href="index.html">여행 소개</a></h1>
-  <h2>
-  <ol>
+  <button id="myButton" 
+    class="button button--winona button--border-thin button--round-s"
+    data-text="night">
+    <span>night</span>
+  </button>
+<script>
+  const btn = document.getElementById('myButton');
+  const span = btn.querySelector('span');
+  let inverted = false;
+  let nightMode = false;
+
+  // 색 반전 함수
+  const invert = rgb => {
+    const [r, g, b] = rgb.match(/\d+/g).map(Number);
+    return `rgb(${255 - r}, ${255 - g}, ${255 - b})`;
+  };
+
+  btn.addEventListener('click', () => {
+    const style = getComputedStyle(btn);
+
+    // 버튼 색상 반전
+    if (!inverted) {
+      btn.dataset.bg = style.backgroundColor;
+      btn.dataset.color = style.color;
+      btn.style.backgroundColor = invert(style.backgroundColor);
+      btn.style.color = invert(style.color);
+      btn.classList.add('button--inverted');
+      btn.classList.add('hr--inverted');
+    } else {
+      btn.style.backgroundColor = btn.dataset.bg;
+      btn.style.color = btn.dataset.color;
+      btn.classList.remove('button--inverted');
+      btn.classList.remove('hr--inverted');
+    }
+    inverted = !inverted;
+
+    // 페이지 배경 색 반전
+    const target = document.body;
+    if (!nightMode) {
+      target.style.backgroundColor = 'black';
+      target.style.color = 'white';
+      btn.dataset.text = "day";
+      span.textContent = 'day';
+      alert('배경색이 변경되었습니다.');
+    } else {
+      target.style.backgroundColor = 'white';
+      target.style.color = 'black';
+      btn.dataset.text = "night";
+      span.textContent = 'night';
+      alert('배경색이 변경되었습니다.');
+    }
+    nightMode = !nightMode;
+  });
+</script>
+  <script>
+    let items = document.getElementsByClassName("myClass");
+    for (let i = 0; i < items.length; i++) {
+        items[i].style.color = "#99004C"; // 원하는 색상으로 변경
+    }
+  </script>
+  <h1 style="margin-top: 90px;"><a href="index.html">여행 소개</a></h1>
+  </div>
+  <h2><ol>
     <li><a href="1.html">첫째날</a></li>
     <li><a href="2.html">둘째날</a></li>
     <li><a href="3.html">셋째날</a></li>
@@ -16,7 +76,9 @@
   </ol>
   <p style="margin-top:45px;"></p>
   <hr>
+  <hr style="border-top: 2px solid #ffffff; width: 100%;">
   <p style="margin-top:45px;"></p>
+  <script src="script.js"></script>
   셋째날</h2>
   <p style="margin-top:25px;"></p>
   <p>
